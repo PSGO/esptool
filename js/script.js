@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBaudRate();
   loadAllSettings();
   updateTheme();
-  logMsg("First time flashing, please install ESP driver first");
+  logMsg("Install ESP driver first");
 });
 
 function initBaudRate() {
