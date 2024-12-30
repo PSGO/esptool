@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBaudRate();
   loadAllSettings();
   updateTheme();
-  logMsg("Install ESP driver first");
+  logMsg("Support ESP32-s2 & 8266, install ESP driver first");
 });
 
 function initBaudRate() {
