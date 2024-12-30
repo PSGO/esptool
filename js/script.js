@@ -320,7 +320,7 @@ async function clickProgram() {
   butErase.disabled = false;
   baudRate.disabled = false;
   butProgram.disabled = getValidFiles().length == 0;
-  logMsg("刷机完成，重启ESP后即可搜索到热点");
+  logMsg("Completed!");
 }
 
 function getValidFiles() {
