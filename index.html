@@ -77,7 +77,7 @@
         // In development we import locally.
         window.location.hostname === "localhost"
           ? "/dist/web/index.js"
-          : "https://unpkg.com/esp-web-flasher@5.1.4/dist/web/index.js?module"
+          : "https://unpkg.com/esp-web-flasher@5.1.5/dist/web/index.js?module"
       );
     </script>
     <script src="js/script.js" module defer></script>
@@ -85,17 +85,18 @@
   <body>
     <header class="header">
       <div style="text-align:center;">
-        <button id="butConnect" type="button" >连接ESP准备刷机 </button>
+        <button id="butConnect" type="button" >Connect to ESP32/8266 </button>
 		<select style="display:none" id="baudRate"></select>
       </div>
     </header>
     <main class="main">
       <div id="notSupported" class="notSupported">
-        不支持当前浏览器，请使用最新版的Chrome或者Edge浏览器。
+        Sorry, <b>Web Serial</b> is not supported on this device, make sure
+        you're running Chrome 89 or later.
       </div>
       <div class="subheader">
         <div> 
-		<h1 style="font-size:50px;color:#1d9bf0;text-align:center;">ESP本地刷机工具  psgo.github.io</h1>
+		<h1 style="font-size:50px;color:#1d9bf0;text-align:center;">ESP Web Flasher</h1>
 		</div>
 		
         <div class="right">
@@ -133,7 +134,7 @@
                   d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
                 />
               </svg>
-              <span>选择电脑上的Bin固件文件&hellip;</span>
+              <span>Choose a Bin file&hellip;</span>
             </label>
             <div class="progress-bar hidden"><div></div></div>
           </div>
@@ -206,7 +207,7 @@
               Erase
             </button>
             <button id="butProgram" type="button" disabled="disabled">
-              开始刷机
+              Start flashing
             </button>
           </div>
         </div>

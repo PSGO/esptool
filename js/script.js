@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBaudRate();
   loadAllSettings();
   updateTheme();
-  logMsg("首次刷机先安装ESP驱动，数据线连接ESP8266/ESP32并点击顶部按钮，然后选择本地Bin固件开始刷机");
+  logMsg("First time flashing, please install ESP driver first");
 });
 
 function initBaudRate() {
@@ -402,9 +402,9 @@ function toggleUIToolbar(show) {
 }
 
 function toggleUIConnected(connected) {
-  let lbl = "连接ESP准备刷机";
+  let lbl = "Connect to ESP32/8266";
   if (connected) {
-    lbl = "断开ESP";
+    lbl = "Disconnect ESP";
   } else {
     toggleUIToolbar(false);
   }
