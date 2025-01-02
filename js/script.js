@@ -320,7 +320,7 @@ async function clickProgram() {
   butErase.disabled = false;
   baudRate.disabled = false;
   butProgram.disabled = getValidFiles().length == 0;
-  logMsg("Completed!");
+  logMsg("Completed! Remove ESP! ");
 }
 
 function getValidFiles() {
